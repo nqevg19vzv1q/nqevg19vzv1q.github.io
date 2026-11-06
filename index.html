@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>麻花影视-麻花影视在线影视资源_免费电影电视剧观看</title>
+<meta name="description" content="麻花影视汇聚电影、电视剧、综艺、动漫等在线影视资源，提供热门影片分类浏览、清晰片单与快速入口，帮助你在麻花影视找到想看的影视内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23161826'/%3E%3Cpath d='M20 18h24v6H20zm0 11h16v6H20zm0 11h24v6H20z' fill='%23ffb648'/%3E%3Ccircle cx='46' cy='32' r='7' fill='none' stroke='%23ff6b6b' stroke-width='4'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#10121c;
+  --bg-soft:#171a28;
+  --card:#1d2134;
+  --line:#2c3149;
+  --txt:#eceef8;
+  --muted:#9ba2bd;
+  --gold:#ffb648;
+  --red:#ff6b6b;
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--txt);
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1120px,92%);margin:0 auto}
+
+/* header */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(16,18,28,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;padding:14px 0;
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.22rem;letter-spacing:.5px}
+.logo .mark{width:38px;height:38px;flex:0 0 auto}
+.logo b{color:var(--gold)}
+nav.menu{display:flex;gap:6px;flex-wrap:wrap}
+nav.menu a{
+  padding:7px 12px;border-radius:999px;font-size:.92rem;color:var(--muted);
+  transition:.2s;
+}
+nav.menu a:hover,nav.menu a:focus-visible{background:var(--card);color:var(--txt)}
+.nav-cta{
+  background:linear-gradient(135deg,var(--gold),#ff8f4d);
+  color:#20160a;font-weight:700;padding:9px 18px;border-radius:999px;font-size:.9rem;
+  white-space:nowrap;
+}
+.nav-cta:hover{filter:brightness(1.08)}
+
+/* hero */
+.hero{
+  position:relative;overflow:hidden;
+  padding:64px 0 56px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(700px 320px at 85% 0%,rgba(255,107,107,.16),transparent 70%),
+    radial-gradient(600px 300px at 10% 20%,rgba(255,182,72,.12),transparent 70%);
+}
+.hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:44px;align-items:center}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid var(--line);background:rgba(255,255,255,.03);
+  padding:5px 14px;border-radius:999px;font-size:.82rem;color:var(--gold);
+  margin-bottom:18px;
+}
+h1{
+  font-size:clamp(1.9rem,4.4vw,3rem);
+  line-height:1.25;letter-spacing:1px;font-weight:800;
+}
+h1 span{color:var(--gold)}
+.hero p.lead{margin-top:16px;color:var(--muted);font-size:1.02rem;max-width:34em}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 22px;border-radius:10px;font-weight:700;font-size:.95rem;
+  border:1px solid transparent;transition:.2s;
+}
+.btn-primary{background:linear-gradient(135deg,var(--gold),#ff8f4d);color:#20160a}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-ghost{border-color:var(--line);color:var(--txt);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{background:var(--card)}
+.hero-visual{
+  background:var(--bg-soft);
+  border:1px solid var(--line);
+  border-radius:20px;padding:18px;
+  box-shadow:0 24px 60px -30px rgba(0,0,0,.9);
+}
+.screen{
+  border-radius:12px;overflow:hidden;background:#0b0d15;
+  border:1px solid #262b40;
+}
+.hero-visual .cap{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:14px;font-size:.85rem;color:var(--muted);
+}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--red);display:inline-block;margin-right:6px}
+
+/* sections */
+section{padding:58px 0}
+.sec-head{margin-bottom:28px}
+.sec-head .kicker{color:var(--gold);font-size:.85rem;letter-spacing:2px;font-weight:700}
+.sec-head h2{font-size:clamp(1.35rem,2.6vw,1.75rem);margin-top:6px;font-weight:800}
+.sec-head p{color:var(--muted);margin-top:8px;max-width:44em;font-size:.95rem}
+
+/* category cards */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 18px;transition:.22s;
+}
+.card:hover{transform:translateY(-4px);border-color:#3c4263}
+.card .ico{
+  width:42px;height:42px;border-radius:11px;display:grid;place-items:center;
+  background:rgba(255,182,72,.12);margin-bottom:14px;
+}
+.card h3{font-size:1.02rem;font-weight:700}
+.card p{color:var(--muted);font-size:.87rem;margin-top:6px;line-height:1.65}
+.card .more{display:inline-block;margin-top:12px;font-size:.83rem;color:var(--gold)}
+
+/* hot list */
+.hot-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:26px;align-items:start}
+.list{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.list li{list-style:none}
+.list a{
+  display:flex;align-items:center;gap:14px;padding:14px 18px;
+  border-bottom:1px solid var(--line);transition:.18s;
+}
+.list li:last-child a{border-bottom:none}
+.list a:hover{background:var(--card)}
+.rank{
+  width:26px;height:26px;flex:0 0 auto;border-radius:7px;display:grid;place-items:center;
+  font-size:.8rem;font-weight:800;background:#262b40;color:var(--muted);
+}
+.list li:nth-child(1) .rank,.list li:nth-child(2) .rank,.list li:nth-child(3) .rank{
+  background:linear-gradient(135deg,var(--gold),#ff8f4d);color:#20160a;
+}
+.list .t{font-size:.95rem;font-weight:600}
+.list .tag{
+  margin-left:auto;font-size:.75rem;color:var(--muted);
+  border:1px solid var(--line);padding:2px 9px;border-radius:999px;white-space:nowrap;
+}
+.poster{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;
+}
+.poster h3{font-size:1rem;margin-bottom:4px}
+.poster .sub{color:var(--muted);font-size:.85rem;margin-bottom:14px}
+.poster .frame{border-radius:10px;overflow:hidden;border:1px solid #262b40}
+
+/* article */
+.article{display:grid;grid-template-columns:1fr 320px;gap:36px;align-items:start}
+.article h2{font-size:1.5rem;margin-bottom:14px}
+.article h3{font-size:1.06rem;margin:22px 0 8px;color:var(--gold)}
+.article p{color:#c7cbe0;margin-bottom:12px;font-size:.96rem}
+.aside{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;
+}
+.aside h4{font-size:.95rem;margin-bottom:10px}
+.aside ul{list-style:none;font-size:.88rem;color:var(--muted)}
+.aside li{padding:9px 0;border-bottom:1px dashed var(--line)}
+.aside li:last-child{border-bottom:none}
+.aside li b{color:var(--txt);font-weight:600}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+}
+.step .n{
+  display:inline-block;font-size:.78rem;font-weight:800;color:var(--gold);
+  border:1px solid rgba(255,182,72,.4);padding:2px 10px;border-radius:999px;margin-bottom:12px;
+}
+.step h3{font-size:1rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.88rem}
+
+/* footer */
+footer{
+  border-top:1px solid var(--line);background:#0c0e16;padding:38px 0 26px;margin-top:20px;
+}
+.foot-top{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;align-items:flex-start}
+.foot-brand{max-width:30em}
+.foot-brand .logo{margin-bottom:10px}
+.foot-brand p{color:var(--muted);font-size:.87rem}
+.foot-links{display:flex;gap:40px;flex-wrap:wrap}
+.foot-links h5{font-size:.88rem;margin-bottom:10px;color:var(--txt)}
+.foot-links a{display:block;color:var(--muted);font-size:.85rem;padding:4px 0}
+.foot-links a:hover{color:var(--gold)}
+.copy{
+  border-top:1px solid var(--line);margin-top:26px;padding-top:16px;
+  color:#6f7691;font-size:.8rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .hot-grid,.article{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .nav{padding:11px 0}
+  nav.menu{display:none}
+  .logo{font-size:1.05rem}
+  .hero{padding:44px 0 40px}
+  .cards{grid-template-columns:1fr}
+  section{padding:42px 0}
+  .btn{flex:1 1 auto;justify-content:center}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="麻花影视首页">
+      <svg class="mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1d2134"/>
+        <path d="M18 17h28v6H18zm0 12h18v6H18zm0 12h28v6H18z" fill="#ffb648"/>
+        <circle cx="47" cy="32" r="7" fill="none" stroke="#ff6b6b" stroke-width="4"/>
+      </svg>
+      <span>麻花<b>影视</b></span>
+    </a>
+    <nav class="menu" aria-label="主导航">
+      <a href="#categories">影视分类</a>
+      <a href="#hot">热播榜单</a>
+      <a href="#about">关于麻花影视</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="nav-cta" href="#hot">开始观影</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="badge">电影 · 剧集 · 综艺 · 动漫</span>
+        <h1>麻花影视</h1>
+        <p class="lead">麻花影视是一个面向影视爱好者的在线观看入口，把电影、电视剧、综艺与动漫集中在一处，按类型、热度与更新节奏整理片单，减少反复搜索的麻烦，让找片这件事变得更直接。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#categories">浏览影视分类</a>
+          <a class="btn btn-ghost" href="#about">了解麻花影视</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="screen">
+          <svg viewBox="0 0 420 240" role="img" aria-label="影视播放界面示意插画">
+            <rect width="420" height="240" fill="#0b0d15"/>
+            <circle cx="210" cy="120" r="42" fill="none" stroke="#ffb648" stroke-width="3" opacity=".9"/>
+            <path d="M198 100l30 20-30 20z" fill="#ffb648"/>
+            <rect x="30" y="196" width="360" height="5" rx="2.5" fill="#262b40"/>
+            <rect x="30" y="196" width="150" height="5" rx="2.5" fill="#ff6b6b"/>
+            <circle cx="180" cy="198.5" r="7" fill="#ff6b6b"/>
+            <rect x="30" y="30" width="120" height="10" rx="5" fill="#262b40"/>
+            <rect x="30" y="50" width="80" height="8" rx="4" fill="#1f2438"/>
+          </svg>
+        </div>
+        <div class="cap">
+          <span><span class="dot"></span>正在播放示例</span>
+          <span>清晰片单 · 快速入口</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">CATEGORIES</div>
+        <h2>按类型进入麻花影视片库</h2>
+        <p>不同观众的口味差别很大，麻花影视把内容拆成几个常见大类，先选类型再挑具体作品，比漫无目的地翻页更省时间。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffb648" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M8 5v4M16 5v4"/></svg>
+          </div>
+          <h3>电影</h3>
+          <p>院线新片、类型片与经典老片混排，按题材和年份都能找到入口。</p>
+          <a class="more" href="#hot">查看热播 →</a>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffb648" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M16 4v16"/></svg>
+          </div>
+          <h3>电视剧</h3>
+          <p>国产剧、美剧、日韩剧按更新状态归集，追更时更容易找到下一集。</p>
+          <a class="more" href="#hot">查看连载 →</a>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffb648" stroke-width="2" stroke-linecap="round"><path d="M12 3l2.6 5.6L21 9.3l-4.5 4.4 1.1 6.3L12 17l-5.6 3 1.1-6.3L3 9.3l6.4-.7z"/></svg>
+          </div>
+          <h3>综艺</h3>
+          <p>真人秀、音乐竞演与访谈节目按季整理，适合随手点开当背景声。</p>
+          <a class="more" href="#hot">查看综艺 →</a>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffb648" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+          </div>
+          <h3>动漫</h3>
+          <p>国漫与日漫分区呈现，新番与长篇番剧可按集数顺序浏览。</p>
+          <a class="more" href="#hot">查看动漫 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="hot">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">TRENDING</div>
+        <h2>麻花影视热播关注榜</h2>
+        <p>榜单用于呈现站内近期被点开较多的条目，类型与状态一并标注，便于先判断是否值得点进去。榜单顺序会随浏览情况调整。</p>
+      </div>
+      <div class="hot-grid">
+        <ul class="list">
+          <li><a href="#hot"><span class="rank">1</span><span class="t">城市夜行</span><span class="tag">电影 · 悬疑</span></a></li>
+          <li><a href="#hot"><span class="rank">2</span><span class="t">长风渡口</span><span class="tag">剧集 · 更新中</span></a></li>
+          <li><a href="#hot"><span class="rank">3</span><span class="t">周末不打烊</span><span class="tag">综艺 · 真人秀</span></a></li>
+          <li><a href="#hot"><span class="rank">4</span><span class="t">星海归途</span><span class="tag">动漫 · 新番</span></a></li>
+          <li><a href="#hot"><span class="rank">5</span><span class="t">山那边的信</span><span class="tag">电影 · 剧情</span></a></li>
+          <li><a href="#hot"><span class="rank">6</span><span class="t">微光之城</span><span class="tag">剧集 · 已完结</span></a></li>
+        </ul>
+        <div class="poster">
+          <h3>今日推荐位</h3>
+          <p class="sub">适合在一个完整时段里看完的作品</p>
+          <div class="frame">
+            <svg viewBox="0 0 360 200" role="img" aria-label="推荐影片封面示意">
+              <rect width="360" height="200" fill="#141827"/>
+              <path d="M0 150 L70 100 L140 140 L210 80 L280 130 L360 90 L360 200 L0 200Z" fill="#1f2438"/>
+              <circle cx="285" cy="58" r="24" fill="#ffb648" opacity=".85"/>
+              <rect x="28" y="150" width="120" height="9" rx="4.5" fill="#2c3149"/>
+              <rect x="28" y="168" width="80" height="7" rx="3.5" fill="#232840"/>
+            </svg>
+          </div>
+          <a class="btn btn-primary" style="margin-top:16px;width:100%;justify-content:center" href="#categories">进入片库挑选</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap article">
+      <div>
+        <h2>关于麻花影视：它解决的是找片效率问题</h2>
+        <p>在影视内容分散于多个平台的当下，观众的常见困扰并不是没有可看的作品，而是不知道从哪一部开始。麻花影视的定位是把内容入口做得更集中：一部作品的基本信息、所属类型和当前状态放在同一视野里，先看分类再看榜单，减少在搜索框反复输入片名的时间。</p>
+        <h3>内容组织逻辑</h3>
+        <p>麻花影视采用“类型分区 + 榜单排序 + 状态标注”三层结构。类型分区回答“我想看什么”；榜单排序回答“最近大家在关注什么”；状态标注回答“这部剧是否还在更新”。三层信息互相补充，避免单一维度带来的选择困难。</p>
+        <h3>浏览与观看的衔接</h3>
+        <p>在麻花影视里，从一个分类进入作品列表后，可以直接看到作品的类型标签与更新情况，再决定是否继续深入。这样的路径比先跳转到独立详情页再返回列表要短，也更适合在碎片时间快速挑选。站内页面以静态内容为主，加载迅速，移动端阅读顺序与桌面端保持一致。</p>
+        <h3>使用时的注意事项</h3>
+        <p>影视内容受版权与地区差异影响，可观看范围会随时变化。麻花影视只做信息归集与入口整理，具体可播放情况以对应页面当时的展示为准。若某条目长期无法访问，说明该资源状态已经变更，建议从分类页重新选择同类作品。</p>
+      </div>
+      <aside class="aside" aria-label="站点速览">
+        <h4>麻花影视速览</h4>
+        <ul>
+          <li><b>内容类型</b>：电影、剧集、综艺、动漫</li>
+          <li><b>组织方式</b>：分类分区 + 关注榜单</li>
+          <li><b>状态标注</b>：更新中 / 已完结</li>
+          <li><b>适配终端</b>：桌面与移动端同一阅读顺序</li>
+          <li><b>页面特点</b>：静态呈现，入口清晰</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">HOW IT WORKS</div>
+        <h2>三步完成一次找片</h2>
+        <p>不熟悉麻花影视的访客，可以按下面顺序开始，通常一到两分钟就能确定要看的作品。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="n">STEP 01</span>
+          <h3>选类型</h3>
+          <p>先从电影、剧集、综艺、动漫中选一个大类，缩小候选范围，避免在全部内容里来回翻找。</p>
+        </div>
+        <div class="step">
+          <span class="n">STEP 02</span>
+          <h3>看榜单</h3>
+          <p>参考热播关注榜的排序，结合标签判断题材与状态，挑出两三部感兴趣的作品作为备选。</p>
+        </div>
+        <div class="step">
+          <span class="n">STEP 03</span>
+          <h3>进入观看</h3>
+          <p>确认作品后点击对应入口进入播放页面，若资源状态有变化，回到分类页重新选择即可。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="logo" href="#top" aria-label="返回麻花影视顶部">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#1d2134"/>
+            <path d="M18 17h28v6H18zm0 12h18v6H18zm0 12h28v6H18z" fill="#ffb648"/>
+            <circle cx="47" cy="32" r="7" fill="none" stroke="#ff6b6b" stroke-width="4"/>
+          </svg>
+          <span>麻花影视</span>
+        </a>
+        <p>麻花影视把电影、剧集、综艺与动漫的入口整理在一处，用分类与榜单帮助访客更快找到想看的作品。内容信息以页面当时展示为准。</p>
+      </div>
+      <div class="foot-links">
+        <div>
+          <h5>影视分类</h5>
+          <a href="#categories">电影</a>
+          <a href="#categories">电视剧</a>
+          <a href="#categories">综艺</a>
+          <a href="#categories">动漫</a>
+        </div>
+        <div>
+          <h5>站内导航</h5>
+          <a href="#hot">热播榜单</a>
+          <a href="#about">关于麻花影视</a>
+          <a href="#faq">找片三步</a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 麻花影视 · 影视信息归集与入口整理</span>
+      <span>内容状态随时变化，以页面展示为准</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+                                                   </html>
