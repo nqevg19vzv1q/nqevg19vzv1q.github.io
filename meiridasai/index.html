@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日大赛黑料在线入口-最新黑料在线入口_大赛黑料热点在线查看</title>
+<meta name="description" content="每日大赛黑料在线入口汇集大赛热点黑料内容，提供最新黑料在线查看与热点话题速览，帮助访问者快速进入当日大赛黑料内容页面。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314130f'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23f5b301' stroke-width='4'/%3E%3Cpath d='M32 21v22M21 32h22' stroke='%23f5b301' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#14130f;
+  --ink-2:#2b2820;
+  --paper:#f7f3ea;
+  --paper-2:#efe9db;
+  --line:#d8cfbb;
+  --gold:#c98a06;
+  --gold-soft:#f5b301;
+  --red:#a2331f;
+  --muted:#6b6353;
+  --radius:14px;
+  --maxw:1120px;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",system-ui,-apple-system,"Segoe UI",sans-serif;
+  line-height:1.75;
+  font-size:16px;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;max-width:100%;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+
+/* header */
+.site-header{
+  background:var(--ink);
+  color:var(--paper);
+  border-bottom:3px solid var(--gold);
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  justify-content:space-between;
+  min-height:66px;
+  flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;}
+.brand-mark{
+  width:34px;height:34px;flex:0 0 auto;
+  border-radius:9px;
+  background:var(--ink-2);
+  display:grid;place-items:center;
+  border:1px solid #4a4436;
+}
+.brand-mark svg{width:22px;height:22px;}
+.brand-text{font-size:1.02rem;line-height:1.3;}
+.brand-text small{display:block;font-size:.66rem;font-weight:500;color:#c9bfa6;letter-spacing:1.5px;text-transform:uppercase;}
+.site-nav{display:flex;gap:4px;flex-wrap:wrap;}
+.site-nav a{
+  padding:7px 11px;
+  font-size:.9rem;
+  color:#e7dfcd;
+  border-radius:8px;
+  transition:background .15s,color .15s;
+}
+.site-nav a:hover,.site-nav a:focus-visible{background:#2c281e;color:var(--gold-soft);}
+.nav-cta{
+  background:var(--gold-soft);
+  color:var(--ink)!important;
+  font-weight:700;
+}
+
+/* hero */
+.hero{
+  background:
+    radial-gradient(circle at 85% 15%,rgba(245,179,1,.18),transparent 45%),
+    linear-gradient(180deg,#1b1912,#14130f 70%);
+  color:var(--paper);
+  padding:52px 0 46px;
+  border-bottom:1px solid #000;
+}
+.hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:36px;align-items:center;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.78rem;letter-spacing:2px;
+  color:var(--gold-soft);
+  border:1px solid #4d4426;
+  background:#221f16;
+  padding:4px 12px;border-radius:999px;
+  margin-bottom:18px;
+}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#e0452a;box-shadow:0 0 0 3px rgba(224,69,42,.25);}
+h1{
+  font-size:clamp(1.7rem,3.6vw,2.7rem);
+  line-height:1.28;
+  margin:0 0 16px;
+  font-weight:900;
+  letter-spacing:.5px;
+}
+.hero p.lead{
+  margin:0 0 14px;
+  color:#d6cdb8;
+  font-size:1rem;
+  max-width:36em;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 20px;
+  border-radius:10px;
+  font-weight:700;
+  font-size:.95rem;
+  border:1px solid transparent;
+  cursor:pointer;
+  transition:transform .12s,background .15s;
+}
+.btn:active{transform:translateY(1px);}
+.btn-primary{background:var(--gold-soft);color:#1a1608;}
+.btn-primary:hover{background:#ffc422;}
+.btn-ghost{border-color:#5a5140;color:#efe7d5;background:transparent;}
+.btn-ghost:hover{background:#241f16;}
+.hero-note{
+  margin-top:20px;font-size:.82rem;color:#9b917b;
+  display:flex;align-items:center;gap:8px;
+}
+.hero-note svg{width:15px;height:15px;flex:0 0 auto;}
+
+/* hero card */
+.hero-card{
+  background:#1f1c14;
+  border:1px solid #3d3627;
+  border-radius:var(--radius);
+  padding:20px;
+}
+.hero-card h2{font-size:.86rem;letter-spacing:2px;color:var(--gold-soft);margin:0 0 14px;font-weight:700;}
+.hero-card ul{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
+.hero-card li{display:flex;gap:10px;font-size:.9rem;color:#ddd4c0;line-height:1.6;}
+.hero-card li b{color:var(--paper);font-weight:700;}
+.tag-num{
+  flex:0 0 auto;width:22px;height:22px;border-radius:6px;
+  background:#332d1f;color:var(--gold-soft);
+  font-size:.72rem;font-weight:800;
+  display:grid;place-items:center;
+  margin-top:2px;
+}
+
+/* sections */
+section{padding:52px 0;}
+.sec-head{margin-bottom:26px;}
+.sec-head .kicker{
+  font-size:.76rem;letter-spacing:2.5px;color:var(--red);
+  font-weight:800;text-transform:uppercase;
+}
+.sec-head h2{
+  font-size:clamp(1.3rem,2.4vw,1.72rem);
+  margin:6px 0 8px;
+  font-weight:900;
+  letter-spacing:.3px;
+}
+.sec-head p{margin:0;color:var(--muted);max-width:46em;font-size:.95rem;}
+
+/* entry cards */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.entry-card{
+  background:#fffdf8;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px 20px;
+  display:flex;flex-direction:column;
+  gap:10px;
+  position:relative;
+  overflow:hidden;
+  transition:border-color .15s,box-shadow .15s,transform .15s;
+}
+.entry-card::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--gold-soft);
+}
+.entry-card:hover{border-color:#b9a97f;box-shadow:0 8px 22px rgba(40,32,12,.08);transform:translateY(-2px);}
+.entry-card .badge{
+  align-self:flex-start;font-size:.7rem;font-weight:800;letter-spacing:1.5px;
+  color:#7a5310;background:#fbecc4;border-radius:6px;padding:2px 9px;
+}
+.entry-card h3{font-size:1.06rem;margin:0;font-weight:800;}
+.entry-card p{margin:0;font-size:.9rem;color:#4c4638;flex:1;}
+.entry-card .go{
+  font-size:.86rem;font-weight:800;color:var(--red);
+  display:inline-flex;align-items:center;gap:6px;
+}
+.entry-card .go svg{width:14px;height:14px;}
+
+/* hot list */
+.hot-wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:26px;align-items:start;}
+.hot-list{background:#fffdf8;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+.hot-item{
+  display:flex;gap:14px;padding:16px 18px;
+  border-bottom:1px dashed var(--line);
+  align-items:flex-start;
+}
+.hot-item:last-child{border-bottom:0;}
+.hot-rank{
+  flex:0 0 auto;width:26px;height:26px;border-radius:7px;
+  display:grid;place-items:center;
+  font-size:.78rem;font-weight:900;
+  background:var(--paper-2);color:#7a5310;
+}
+.hot-item:nth-child(1) .hot-rank{background:#a2331f;color:#fff;}
+.hot-item:nth-child(2) .hot-rank{background:#d08010;color:#fff;}
+.hot-item:nth-child(3) .hot-rank{background:#c2a75e;color:#241f10;}
+.hot-item h4{margin:0 0 4px;font-size:.98rem;font-weight:800;line-height:1.5;}
+.hot-item p{margin:0;font-size:.86rem;color:var(--muted);line-height:1.65;}
+.hot-meta{font-size:.74rem;color:#9a9078;margin-top:6px;display:flex;gap:10px;flex-wrap:wrap;}
+
+.side-box{
+  background:var(--ink);
+  color:#e9e1ce;
+  border-radius:var(--radius);
+  padding:22px;
+  margin-bottom:18px;
+}
+.side-box h3{margin:0 0 10px;font-size:1rem;color:var(--gold-soft);font-weight:800;}
+.side-box p{margin:0 0 12px;font-size:.88rem;color:#c7beaa;line-height:1.7;}
+.side-box ul{margin:0;padding-left:18px;font-size:.87rem;color:#cfc6b2;display:grid;gap:6px;}
+
+/* about / notes */
+.notes{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.note-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.note{
+  background:#fffdf8;border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 22px;
+}
+.note h3{margin:0 0 8px;font-size:1rem;font-weight:800;display:flex;align-items:center;gap:8px;}
+.note h3 svg{width:17px;height:17px;flex:0 0 auto;color:var(--red);}
+.note p{margin:0;font-size:.9rem;color:#4c4638;}
+
+/* download strip */
+.dl-strip{
+  background:#fffdf8;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+}
+.dl-strip h3{margin:0 0 4px;font-size:1.05rem;font-weight:800;}
+.dl-strip p{margin:0;font-size:.86rem;color:var(--muted);}
+.btn-download{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--ink);color:#f5b301;
+  padding:11px 22px;border-radius:10px;font-weight:800;font-size:.92rem;
+  pointer-events:none;opacity:.92;
+}
+
+/* footer */
+.site-footer{background:var(--ink);color:#b7ad97;padding:38px 0 26px;font-size:.85rem;}
+.footer-top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-bottom:22px;border-bottom:1px solid #332e22;}
+.footer-brand{font-weight:800;color:#f2ebda;font-size:.98rem;margin-bottom:6px;}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;}
+.footer-links a:hover{color:var(--gold-soft);}
+.footer-bottom{padding-top:16px;color:#7f7763;line-height:1.8;}
+
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;}
+  .card-grid{grid-template-columns:repeat(2,1fr);}
+  .hot-wrap{grid-template-columns:1fr;}
+  .note-grid{grid-template-columns:1fr;}
+}
+@media (max-width:640px){
+  body{font-size:15.5px;}
+  .header-inner{min-height:auto;padding:10px 0;gap:10px;}
+  .brand-text{font-size:.92rem;}
+  .site-nav{width:100%;gap:2px;}
+  .site-nav a{padding:6px 9px;font-size:.84rem;}
+  .hero{padding:34px 0 32px;}
+  .hero-actions .btn{width:100%;justify-content:center;}
+  .card-grid{grid-template-columns:1fr;}
+  section{padding:38px 0;}
+  .dl-strip{flex-direction:column;align-items:flex-start;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="每日大赛黑料在线入口 首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="8"/><path d="M12 6v12M6 12h12"/>
+        </svg>
+      </span>
+      <span class="brand-text">每日大赛黑料在线入口<small>HOT DAILY FEED</small></span>
+    </a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="#entry">在线入口</a>
+      <a href="#hot">今日热点</a>
+      <a href="#notes">看点说明</a>
+      <a href="#download">客户端</a>
+      <a href="#entry" class="nav-cta">立即进入</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot" aria-hidden="true"></span>今日内容已更新</span>
+        <h1 id="hero-title">每日大赛黑料在线入口</h1>
+        <p class="lead">每日大赛黑料在线入口把当日大赛相关的热点黑料内容集中在一个页面里，按话题分区排列，打开即可查看条目摘要与完整内容的进入方式。</p>
+        <p class="lead">不用在多个页面之间来回跳转，从首页三个入口分别进入最新更新、热榜内容与专题合集，适合只想快速了解大赛热点走向的访问者。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#entry">
+            进入在线入口
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#hot">查看今日热点</a>
+        </div>
+        <p class="hero-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></svg>
+          页面内容按发布时间排列，热点条目随当日更新变化
+        </p>
+      </div>
+
+      <aside class="hero-card" aria-label="入口速览">
+        <h2>入口速览</h2>
+        <ul>
+          <li><span class="tag-num">1</span><span><b>最新更新</b>：当日新发布的大赛黑料条目，按时间倒序显示。</span></li>
+          <li><span class="tag-num">2</span><span><b>热榜内容</b>：被讨论最多的话题，附一句内容摘要。</span></li>
+          <li><span class="tag-num">3</span><span><b>专题合集</b>：同一大赛或同一线索的连续内容归并在一起。</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ENTRY -->
+  <section id="entry" aria-labelledby="entry-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Online Entry</span>
+        <h2 id="entry-title">三个在线入口，对应不同的查看方式</h2>
+        <p>每日大赛黑料在线入口把访问需求拆成三类：看更新、看热度、看线索。每个入口承担一件事，进入后直接落到对应列表。</p>
+      </div>
+      <div class="card-grid">
+        <article class="entry-card">
+          <span class="badge">更新最快</span>
+          <h3>最新黑料在线入口</h3>
+          <p>按时间倒序展示当日新条目，标题、摘要与发布时间同时可见，适合每天固定时间查看一次的习惯。</p>
+          <a class="go" href="#hot">进入最新列表
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+        <article class="entry-card">
+          <span class="badge">讨论最多</span>
+          <h3>大赛黑料热点查看</h3>
+          <p>把当日被提及次数较多的话题集中排序，每条附一段简短背景，便于先判断是否值得细看。</p>
+          <a class="go" href="#hot">进入热榜
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+        <article class="entry-card">
+          <span class="badge">成组阅读</span>
+          <h3>大赛黑料专题合集</h3>
+          <p>同一大赛的相关条目归入一个合集，前后顺序按事件脉络排列，适合补看前因后果。</p>
+          <a class="go" href="#notes">查看合集说明
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOT -->
+  <section id="hot" aria-labelledby="hot-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Today Hot</span>
+        <h2 id="hot-title">今日热点条目</h2>
+        <p>以下条目按讨论热度排列，摘要只保留关键信息，完整内容在条目内展开。每日大赛黑料在线入口的更新节奏与热点形成节奏保持一致。</p>
+      </div>
+      <div class="hot-wrap">
+        <div class="hot-list">
+          <article class="hot-item">
+            <span class="hot-rank">1</span>
+            <div>
+              <h4>大赛评审名单变动引发讨论</h4>
+              <p>有网友整理出评审名单前后两版对照，指出其中数位评审在临近评审阶段发生替换，讨论集中在更换原因与评分尺度是否受影响。</p>
+              <div class="hot-meta"><span>热点讨论</span><span>名单对照</span><span>评分尺度</span></div>
+            </div>
+          </article>
+          <article class="hot-item">
+            <span class="hot-rank">2</span>
+            <div>
+              <h4>作品相似度争议持续发酵</h4>
+              <p>两组参赛作品在构图与配色上被指相似，双方支持者各贴出创作时间线，目前尚无统一说法，条目内保留双方陈述原文。</p>
+              <div class="hot-meta"><span>相似度争议</span><span>时间线</span><span>双方陈述</span></div>
+            </div>
+          </article>
+          <article class="hot-item">
+            <span class="hot-rank">3</span>
+            <div>
+              <h4>投票数据异常截图流传</h4>
+              <p>一张票数短时间跳动的截图在多个讨论区被转发，来源尚未确认，条目内标注了截图出现的时间与转发路径，供读者自行判断。</p>
+              <div class="hot-meta"><span>数据截图</span><span>来源待确认</span><span>转发路径</span></div>
+            </div>
+          </article>
+          <article class="hot-item">
+            <span class="hot-rank">4</span>
+            <div>
+              <h4>赛制调整说明的版本差异</h4>
+              <p>赛制说明文档在两个时间点出现措辞差异，关注点在于评分权重表述的变化，条目内并列两个版本的对应段落。</p>
+              <div class="hot-meta"><span>赛制说明</span><span>版本差异</span><span>评分权重</span></div>
+            </div>
+          </article>
+          <article class="hot-item">
+            <span class="hot-rank">5</span>
+            <div>
+              <h4>往届结果被重新翻出对照</h4>
+              <p>部分网友把本届与往届的入围结构做横向对照，讨论焦点是入围比例是否出现明显变化，条目内附对照表说明。</p>
+              <div class="hot-meta"><span>往届对照</span><span>入围结构</span><span>比例变化</span></div>
+            </div>
+          </article>
+        </div>
+
+        <aside>
+          <div class="side-box">
+            <h3>怎么看这些条目</h3>
+            <p>热点条目只是讨论的入口，不是结论。每条内容都标注了信息来源类型与出现时间，读者可以据此判断可信程度。</p>
+            <ul>
+              <li>先看标题与摘要，判断是否与自己关注的大赛相关</li>
+              <li>再看来源标注，区分截图、转述与原始文档</li>
+              <li>涉及双方说法时，条目内并列呈现，不做单方结论</li>
+            </ul>
+          </div>
+          <div class="side-box" style="background:#2b2820;">
+            <h3>更新节奏</h3>
+            <p>热点条目通常在讨论集中出现后的一段时间内补充，遇到同一话题的后续进展，会在原条目下追加说明，而不是另开新条目。</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTES -->
+  <section id="notes" class="notes" aria-labelledby="notes-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Reading Notes</span>
+        <h2 id="notes-title">内容说明与阅读提示</h2>
+        <p>每日大赛黑料在线入口提供的是热点内容的汇集与索引，条目文字以转述和摘要为主，具体细节以条目内标注的原始来源为准。</p>
+      </div>
+      <div class="note-grid">
+        <article class="note">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3l9 4.5v9L12 21l-9-4.5v-9z"/><path d="M12 12v9"/></svg>
+            信息来源如何标注
+          </h3>
+          <p>条目会注明信息属于截图、转述还是原始文档，并给出出现时间。无法确认来源的内容会明确标注“来源待确认”，不写入确定判断。</p>
+        </article>
+        <article class="note">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>
+            争议内容的处理方式
+          </h3>
+          <p>涉及双方说法的条目采用并列呈现，保留各自表述原文与时间，不在页面内给出谁对谁错的结论，由读者结合上下文自行判断。</p>
+        </article>
+        <article class="note">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+            条目与合集的关系
+          </h3>
+          <p>单条热点解决“发生了什么”，合集解决“前后怎么发展”。同一大赛的多条内容会按事件顺序编入合集，方便从头补看。</p>
+        </article>
+        <article class="note">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+            阅读时的基本约定
+          </h3>
+          <p>页面内容为公开讨论的汇总，不鼓励针对个人的攻击性表达。遇到与事实不符的条目，可通过页尾反馈渠道提交更正说明。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download" aria-labelledby="download-title">
+    <div class="wrap">
+      <div class="dl-strip">
+        <div>
+          <h3 id="download-title">桌面端内容速览工具</h3>
+          <p>把每日大赛黑料在线入口的热点列表以简洁视图呈现，方便固定时段集中查看。当前版本仍在准备中。</p>
+        </div>
+        <a class="btn-download" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+          下载
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6"/><path d="M5 20h14"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">每日大赛黑料在线入口</div>
+        <div>大赛热点黑料内容的汇集与索引，条目摘要随当日讨论更新。</div>
+      </div>
+      <nav class="footer-links" aria-label="页尾导航">
+        <a href="#entry">在线入口</a>
+        <a href="#hot">今日热点</a>
+        <a href="#notes">看点说明</a>
+        <a href="#top">回到顶部</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      页面内容来自公开讨论的汇总与转述，不代表对任何一方的事实认定。每日大赛黑料在线入口仅提供热点索引，具体细节请以条目内标注的原始来源为准。
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
